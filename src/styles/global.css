@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: "Rajdhani";
+}
+
+.pageContainer {
+    border: 1px solid red;
+    width: 100vw;
+    height: 100vh;
+    padding: 1vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: white;
+    font-family: monospace;
+    color: black;
+    padding: 1vw;
+}
+
+span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.rarity-3 {
+    color: blue;
+}
+
+.rarity-4 {
+    color: purple;
+}
+
+.rarity-5 {
+    color: gold;
+}
