@@ -1,8 +1,7 @@
 <script>
-	import { migrate } from "svelte/compiler";
     import "../styles/global.css"
 
-    let pity = 0
+    let pity = $state(0)
     let chance = 6
     let pulled = $state([])
 
@@ -20,7 +19,7 @@
             gacha_item = 3
         }
         if (pity >= 80) {
-            pity = 0 
+            pity = pity%10 
             gacha_item = 5
         }
         return gacha_item
@@ -58,6 +57,7 @@
             <span class={getRarityClass(item)}>{item}</span>
         {/each}
     </div>
+    <div>current pity: {pity}</div>
     <div class="buttpnContainer">
     <button onclick={pull_1}>1X</button>
     <button onclick={pull_10}>10X</button>
