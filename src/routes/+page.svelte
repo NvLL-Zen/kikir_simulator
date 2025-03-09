@@ -51,16 +51,31 @@
 </script>
 
 <div class="pageContainer">
+    <div class="mainContainer">
     <h1>Gacha Simulator</h1>
-    <div>
-        {#each pulled as item}
-            <span class={getRarityClass(item)}>{item}</span>
+    <div class="cardsContainer" >
+        <div class="rows">
+            {#each pulled.slice(0,3) as item}
+            <span class="Cards {getRarityClass(item)}">{item}</span>
         {/each}
+        </div>
+        <div class="rows">
+            {#each pulled.slice(3,7) as item}
+            <span class="Cards {getRarityClass(item)}">{item}</span>
+        {/each}
+        </div>
+        <div class="rows">
+            {#each pulled.slice(7, 11) as item}
+            <span class="Cards {getRarityClass(item)}">{item}</span>
+        {/each}
+        </div>
+        
     </div>
-    <div>current pity: {pity}</div>
-    <div class="buttpnContainer">
+    <div class="pityCounter">current pity: {pity}</div>
+    <div class="buttonContainer">
     <button onclick={pull_1}>1X</button>
     <button onclick={pull_10}>10X</button>
     </div>
+</div>
     
 </div>

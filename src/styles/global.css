@@ -1,9 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: black;
+    /* border: 1px solid red; */
     color: white;
     font-family: "Rajdhani";
+    z-index: 2;
 }
 
 .pageContainer {
@@ -17,10 +18,27 @@
     gap: 50px;
     align-items: center;
     justify-content: center;
+    background: url("../img/star_bg.webp");
+    background-size: cover;
+    background-position:center;
+}
+
+.mainContainer {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
 }
 
 .buttonContainer {
     display: flex;
+    justify-content: flex-end;
+    ;
     gap: 50px;
 }
 
@@ -36,19 +54,57 @@ button {
     padding: 1vw;
 }
 
+.cardsContainer {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transform: rotateZ(-10deg);
+    
+    z-index: -1;
+}
+
+.rows {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.Cards {
+    width: 20vw;
+    height: 20vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 span {
+    display: block;
     font-size: 2rem;
     font-weight: 700;
 }
 
+.pityCounter {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .rarity-3 {
     color: rgb(0, 76, 255);
+    background: linear-gradient(180deg, black 50%, #8bb5fd);
+    border-bottom: 5px solid #7398d6;
 }
 
 .rarity-4 {
     color: rgb(255, 5, 255);
+    background: linear-gradient(180deg, black 50%, #be91ff);
+    border-bottom: 5px solid #be91ff;
 }
 
 .rarity-5 {
     color: rgb(255, 217, 0);
+    background: linear-gradient(180deg, black 50%, #fcfe8b);
+    border-bottom: 5px solid #fcfe8b;
 }
